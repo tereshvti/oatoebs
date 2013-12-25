@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form>
+<TabPage TabPageName="Раздел 1,2 (&amp;1)">
+
+<Canvas CanvasName="MAIN_CNV" Multirow="N" ParentName="CANVAS" Width="10300" Height="6000" ViewportWidth="" ViewportHeight="" ViewportXPosition="" ViewportYPosition="">
+<Field BlockName="PMT" Name="EXT_REQ_NUMBER" ColumnName="EXT_REQ_NUMBER" ParentName="TEXT_ITEM" Prompt="Номер заявки" MaximumLength="50" Width="1684" XPosition="920" YPosition="" Height=""></Field>
+<Field BlockName="PMT" Name="INVOICE_ENTER_DATE" ColumnName="INVOICE_ENTER_DATE" ParentName="TEXT_ITEM_DATE" Prompt="Дата заявки" MaximumLength="" Width="808" XPosition="3510" YPosition="0" Height=""></Field>
+<Field BlockName="PMT" Name="BUSINESS_STATUS" ColumnName="BUSINESS_STATUS" ParentName="TEXT_ITEM" Prompt="Статус" MaximumLength="3" Width="400" XPosition="4838" YPosition="" Height=""></Field>
+</Canvas>
+
+<Canvas CanvasName="DOC_PAGE_STACKED" Multirow="N" ParentName="CANVAS_STACKED" Width="10100" Height="2750" ViewportWidth="10104" ViewportHeight="2750" ViewportXPosition="50" ViewportYPosition="500">
+<Field BlockName="PMT" Name="BUDGET_NAME" ColumnName="BUDGET_NAME" ParentName="TEXT_ITEM" Prompt="Бюджет" MaximumLength="512" Width="6261" XPosition="1135" YPosition="978" Height=""></Field>
+<Field BlockName="PMT" Name="FIN_ORG_NAME" ColumnName="FIN_ORG_NAME" ParentName="TEXT_ITEM" Prompt="Фин. орган" MaximumLength="2000" Width="6261" XPosition="1135" YPosition="1228" Height=""></Field>
+<Field BlockName="PMT" Name="GRBS_NAME" ColumnName="GRBS_NAME" ParentName="TEXT_ITEM" Prompt="ГРБС/ГАИФ" MaximumLength="2000" Width="6261" XPosition="1135" YPosition="731" Height=""></Field>
+<Field BlockName="PMT" Name="GRBS_CODE" ColumnName="GRBS_CODE" ParentName="TEXT_ITEM" Prompt="Глава по БК" MaximumLength="20" Width="1200" XPosition="8888" YPosition="731" Height=""></Field>
+<Field BlockName="PMT" Name="OKPO_CODE" ColumnName="OKPO_CODE" ParentName="TEXT_ITEM" Prompt="По ОКПО" MaximumLength="8" Width="1200" XPosition="8888" YPosition="1231" Height=""></Field>
+<Field BlockName="PMT" Name="PAYER_NAME" ColumnName="PAYER_NAME" ParentName="TEXT_ITEM_MULTILINE" Prompt="Клиент" MaximumLength="2000" Width="6261" XPosition="1135" YPosition="231" Height="500"></Field>
+<Field BlockName="PMT" Name="SU_CODE_ENTERED" ColumnName="SU_CODE_ENTERED" ParentName="TEXT_ITEM" Prompt="По сводному реестру" MaximumLength="20" Width="1200" XPosition="8888" YPosition="231" Height=""></Field>
+<Field BlockName="PMT" Name="PA" ColumnName="PA" ParentName="TEXT_ITEM" Prompt="Номер лицевого счета" MaximumLength="20" Width="1200" XPosition="8888" YPosition="481" Height=""></Field>
+<Field BlockName="PMT" Name="FT_S" ColumnName="TOFK_CODE" ParentName="TEXT_ITEM" Prompt="По КОФК" MaximumLength="4" Width="1200" XPosition="8888" YPosition="1481" Height=""></Field>
+<Field BlockName="PMT" Name="FT_S_NAME" ColumnName="FT_S_NAME" ParentName="TEXT_ITEM" Prompt="ФК, орган ФК" MaximumLength="2000" Width="6261" XPosition="1135" YPosition="1481" Height=""></Field>
+<Field BlockName="PMT" Name="LIM_DATE" ColumnName="LIM_DATE" ParentName="TEXT_ITEM_DATE" Prompt="Пред. дата" MaximumLength="" Width="" XPosition="8888" YPosition="1731" Height=""></Field>
+<Field BlockName="PMT" Name="BC_DOC_REG_NUMBER" ColumnName="BC_DOC_REG_NUMBER" ParentName="TEXT_ITEM" Prompt="Учетный номер обязательства" MaximumLength="" Width="1200" XPosition="8888" YPosition="1981" Height=""></Field>
+<Field BlockName="PMT" Name="PAYMENT_PRIORITY_NAME" ColumnName="payment_priority_name" ParentName="TEXT_ITEM" Prompt="Приоритет исп." MaximumLength="250" Width="6261" XPosition="1135" YPosition="2231" Height=""></Field>
+<Field BlockName="PMT" Name="PRIORITY" ColumnName="PRIORITY" ParentName="TEXT_ITEM" Prompt="-" MaximumLength="2" Width="1200" XPosition="8888" YPosition="2231" Height=""></Field>
+<Field BlockName="PMT" Name="FAIP_CODE" ColumnName="FAIP_CODE" ParentName="TEXT_ITEM" Prompt="Код объекта по ФАИП" MaximumLength="14" Width="1200" XPosition="8888" YPosition="2481" Height=""></Field>
+</Canvas>
+
+<Canvas CanvasName="PMT1_STACKED" Multirow="Y" ParentName="CANVAS_STACKED" Width="25000" Height="1000" ViewportWidth="9500" ViewportHeight="500" ViewportXPosition="100" ViewportYPosition="3380">
+<Field BlockName="PMT1" Name="INVOICE_AMOUNT" ColumnName="INVOICE_AMOUNT" ParentName="TEXT_ITEM" Prompt="Сумма в валюте выплаты" MaximumLength="20" Width="1800" XPosition="0" YPosition="250" Height=""></Field>
+<Field BlockName="PMT1" Name="CURRENCY_ENTERED" ColumnName="CURRENCY_ENTERED" ParentName="XXT_CURRENCY_CODE" Prompt="Код вал по ОКВ" MaximumLength="3" Width="600" XPosition="1800" YPosition="250" Height=""></Field>
+<Field BlockName="PMT1" Name="INVOICE_CURRENCY_CODE" ColumnName="INVOICE_CURRENCY_CODE" ParentName="TEXT_ITEM" Prompt="Вал." MaximumLength="3" Width="600" XPosition="1800" YPosition="250" Height=""></Field>
+<Field BlockName="PMT1" Name="BASE_AMOUNT_ENTERED" ColumnName="BASE_AMOUNT_ENTERED" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Сумма в рублевом эквиваленте" MaximumLength="20" Width="1800" XPosition="2404" YPosition="250" Height=""></Field>
+<Field BlockName="PMT1" Name="PREPAY_FLAG" ColumnName="PREPAY_FLAG" ParentName="TEXT_ITEM" Prompt="Аванс" MaximumLength="10" Width="480" XPosition="4734" YPosition="250" Height=""></Field>
+<Field BlockName="PMT1" Name="TAX_AMOUNT_VAT" ColumnName="TAX_AMOUNT_VAT" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Сумма НДС" MaximumLength="" Width="1400" XPosition="5229" YPosition="250" Height=""></Field>
+<Field BlockName="PMT1" Name="PAYMENT_PRIORITY" ColumnName="PAYMENT_PRIORITY" ParentName="TEXT_ITEM" Prompt="Очередность платежа" MaximumLength="1" Width="1188" XPosition="10177" YPosition="250" Height=""></Field>
+<Field BlockName="PMT1" Name="PAYMENT_TYPE_NAME" ColumnName="PAYMENT_TYPE_NAME" ParentName="TEXT_ITEM" Prompt="Вид платежа" MaximumLength="150" Width="1630" XPosition="7031" YPosition="250" Height=""></Field>
+</Canvas>
+
+<Canvas CanvasName="PMT11_STACKED" Multirow="Y" ParentName="CANVAS_STACKED" Width="24380" Height="750" ViewportWidth="9600" ViewportHeight="750" ViewportXPosition="400" ViewportYPosition="4600">
+<Field BlockName="PMT_BASE" Name="INVOICE_TYPE" ColumnName="INVOICE_TYPE" ParentName="TEXT_ITEM" Prompt="Вид" MaximumLength="100" Width="1260" XPosition="0" YPosition="250" Height=""></Field>
+<Field BlockName="PMT_BASE" Name="INVOICE_NUMBER" ColumnName="INVOICE_NUMBER" ParentName="TEXT_ITEM" Prompt="Номер" MaximumLength="45" Width="1200" XPosition="1262" YPosition="250" Height=""></Field>
+<Field BlockName="PMT_BASE" Name="INVOICE_SUBJECT" ColumnName="INVOICE_SUBJECT" ParentName="TEXT_ITEM" Prompt="Предмет" MaximumLength="2000" Width="5400" XPosition="2454" YPosition="250" Height=""></Field>
+<Field BlockName="PMT_BASE" Name="INVOICE_DATE" ColumnName="INVOICE_DATE" ParentName="TEXT_ITEM_DATE" Prompt="Дата" MaximumLength="" Width="954" XPosition="8744" YPosition="250" Height=""></Field>
+<Field BlockName="PMT_BASE" Name="IS_LNK" ColumnName="IS_LNK" ParentName="CHECKBOX" Prompt="ЭДО" MaximumLength="1" Width="400" XPosition="9744" YPosition="250" Height=""></Field>
+</Canvas>
+
+<Canvas CanvasName="PURPOSE_STACKED" Multirow="N" ParentName="CANVAS_STACKED" Width="9844" Height="500" ViewportWidth="9844" ViewportHeight="500" ViewportXPosition="200" ViewportYPosition="3950">
+<Field BlockName="PMT" Name="PAYMENT_PURPOSE" ColumnName="PAYMENT_PURPOSE" ParentName="TEXT_ITEM_MULTILINE" Prompt="Назначение пл. (Примеч.)" MaximumLength="210" Width="7969" XPosition="1854" YPosition="0" Height="500"></Field>
+</Canvas>
+
+</TabPage>
+
+<TabPage TabPageName="Раздел 3,4,5(&amp;2)">
+<Canvas CanvasName="PMT21_STACKED" Multirow="N" ParentName="CANVAS_STACKED" Width="25000" Height="1500" ViewportWidth="10000" ViewportHeight="1250" ViewportXPosition="100" ViewportYPosition="700">
+<Field BlockName="PMT" Name="RECEIVER_NAME" ColumnName="RECEIVER_NAME" ParentName="TEXT_ITEM_MULTILINE" Prompt="Наим." MaximumLength="160" Width="6514" XPosition="979" YPosition="0" Height="500"></Field>
+<Field BlockName="PMT" Name="RECEIVER_INN" ColumnName="RECEIVER_INN" ParentName="TEXT_ITEM" Prompt="ИНН" MaximumLength="12" Width="1200" XPosition="8797" YPosition="0" Height=""></Field>
+<Field BlockName="PMT" Name="RECEIVER_KPP" ColumnName="RECEIVER_KPP" ParentName="XXT_KPP" Prompt="КПП" MaximumLength="" Width="1200" XPosition="8797" YPosition="250" Height="250"></Field>
+<Field BlockName="PMT" Name="RECEIVER_PA" ColumnName="RECEIVER_PA" ParentName="XXT_PA_CODE" Prompt="Лиц. счет" MaximumLength="20" Width="1200" XPosition="8797" YPosition="500" Height="250"></Field>
+<Field BlockName="PMT" Name="RECEIVER_BANK_ACCOUNT" ColumnName="RECEIVER_BANK_ACCOUNT" ParentName="TEXT_ITEM" Prompt="Банк счет" MaximumLength="34" Width="2790" XPosition="979" YPosition="750" Height=""></Field>
+<Field BlockName="PMT" Name="RECEIVER_BANK_BIK" ColumnName="RECEIVER_BANK_BIK" ParentName="TEXT_ITEM" Prompt="БИК/SWIFT" MaximumLength="11" Width="1600" XPosition="4800" YPosition="750" Height=""></Field>
+<Field BlockName="PMT" Name="RECEIVER_BANK_KS" ColumnName="RECEIVER_BANK_KS" ParentName="TEXT_ITEM" Prompt="Корсчет" MaximumLength="20" Width="2400" XPosition="7600" YPosition="750" Height=""></Field>
+<Field BlockName="PMT" Name="RECEIVER_BANK_NAME" ColumnName="RECEIVER_BANK_NAME" ParentName="TEXT_ITEM" Prompt="Наим. банка" MaximumLength="160" Width="9021" XPosition="979" YPosition="1000" Height=""></Field>
+</Canvas>
+
+<Canvas CanvasName="PMT22_STACKED" Multirow="Y" ParentName="CANVAS_STACKED" Width="25000" Height="500" ViewportWidth="10000" ViewportHeight="500" ViewportXPosition="100" ViewportYPosition="2250">
+<Field BlockName="PMT1" Name="OKATO_CODE" ColumnName="OKATO_CODE" ParentName="XXT_OKATO_CODE" Prompt="Код по ОКТМО" MaximumLength="" Width="" XPosition="2606" YPosition="250" Height="250"></Field>
+<Field BlockName="PMT1" Name="TAX_PERIOD" ColumnName="TAX_PERIOD" ParentName="TEXT_ITEM" Prompt="Налоговый период" MaximumLength="10" Width="1200" XPosition="5203" YPosition="250" Height=""></Field>
+<Field BlockName="PMT1" Name="TAX_RATU_ORDER_NUM" ColumnName="TAX_RATU_ORDER_NUM" ParentName="TEXT_ITEM" Prompt="Номер документа" MaximumLength="15" Width="1000" XPosition="6403" YPosition="250" Height=""></Field>
+<Field BlockName="PMT1" Name="TAX_RATU_ORDER_DATE" ColumnName="TAX_RATU_ORDER_DATE" ParentName="TEXT_ITEM" Prompt="Дата документа" MaximumLength="30" Width="1000" XPosition="7403" YPosition="250" Height=""></Field>
+</Canvas>
+
+<Canvas CanvasName="LINES_STACKED" Multirow="Y" ParentName="CANVAS_STACKED" Width="24917" Height="2396" ViewportWidth="7937" ViewportHeight="1271" ViewportXPosition="100" ViewportYPosition="3000">
+<Field BlockName="LINES" Name="DISTRIBUTION_LINE_NUMBER" ColumnName="DISTRIBUTION_LINE_NUMBER" ParentName="TEXT_ITEM" Prompt="№" MaximumLength="6" Width="265" XPosition="0" YPosition="250" Height=""></Field>
+<Field BlockName="LINES" Name="FUND_SOURCE_NAME" ColumnName="FUND_SOURCE_NAME" ParentName="TEXT_ITEM" Prompt="Наименование вида" MaximumLength="2000" Width="1574" XPosition="281" YPosition="250" Height=""></Field>
+<Field BlockName="LINES" Name="BCC_CODE_ENTERED" ColumnName="BCC_CODE_entered" ParentName="XXT_BCC_CODE" Prompt="Код по БК плательщика" MaximumLength="" Width="1600" XPosition="2211" YPosition="249" Height="250"></Field>
+<Field BlockName="LINES" Name="ADD_BCC1_CODE" ColumnName="ADD_BCC1_CODE" ParentName="TEXT_ITEM" Prompt="Код по БК получателя" MaximumLength="20" Width="1600" XPosition="3801" YPosition="250" Height=""></Field>
+<Field BlockName="LINES" Name="AMOUNT" ColumnName="AMOUNT" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Сумма в вал. заявки" MaximumLength="" Width="1562" XPosition="5240" YPosition="250" Height=""></Field>
+<Field BlockName="LINES" Name="BASE_AMOUNT_ENTERED" ColumnName="BASE_AMOUNT_ENTERED" ParentName="TEXT_ITEM" Prompt="Сумма в рублях" MaximumLength="20" Width="1584" XPosition="6896" YPosition="250" Height=""></Field>
+<Field BlockName="LINES" Name="SUBSIDY_TARGET_CODE" ColumnName="SUBSIDY_TARGET_CODE" ParentName="TEXT_ITEM" Prompt="Код цели (аналитический код)" MaximumLength="20" Width="700" XPosition="8773" YPosition="250" Height=""></Field>
+<Field BlockName="LINES" Name="RECEIVER_SUBSIDY_CODE" ColumnName="RECEIVER_SUBSIDY_CODE" ParentName="TEXT_ITEM" Prompt="Код цели получателя" MaximumLength="20" Width="727" XPosition="8773" YPosition="250" Height=""></Field>
+</Canvas>
+
+<Canvas CanvasName="LINES2_STACKED" ParentName="CANVAS_STACKED" Width="10302" Height="2802" ViewportWidth="9885" ViewportHeight="1052" ViewportXPosition="100" ViewportYPosition="4450">
+<Field BlockName="LINES" Name="PAYMENT_PURPOSE" ColumnName="PAYMENT_PURPOSE" ParentName="TEXT_ITEM_MULTILINE" MaximumLength="2000" Width="8438" XPosition="1375" YPosition="1770" Height="500"></Field>
+<Field BlockName="LINES" Name="DESCRIPTION" ColumnName="DESCRIPTION" ParentName="TEXT_ITEM_MULTILINE" MaximumLength="254" Width="8438" XPosition="1375" YPosition="2270" Height="500"></Field>
+</Canvas>
+
+</TabPage>
+
+<TabPage TabPageName="Подписи(&amp;3)">
+<Canvas CanvasName="PMT23_STACKED" Multirow="N" ParentName="CANVAS_STACKED" Width="25010" Height="3042" ViewportWidth="9990" ViewportHeight="3042" ViewportXPosition="100" ViewportYPosition="1100">
+<Field BlockName="PMT" Name="MANAGER_POSITION" ColumnName="MANAGER_POSITION" ParentName="TEXT_ITEM" Prompt="-" MaximumLength="100" Width="2155" XPosition="3038" YPosition="301" Height=""></Field>
+<Field BlockName="PMT" Name="MANAGER" ColumnName="MANAGER" ParentName="TEXT_ITEM" Prompt="-" MaximumLength="2000" Width="2155" XPosition="5219" YPosition="301" Height=""></Field>
+<Field BlockName="PMT" Name="DOC_REG_NUMBER" ColumnName="DOC_REG_NUMBER" ParentName="TEXT_ITEM" Prompt="Номер заявки" MaximumLength="50" Width="1600" XPosition="3038" YPosition="1655" Height=""></Field>
+<Field BlockName="PMT" Name="EXECUTOR_POSITION" ColumnName="EXECUTOR_POSITION" ParentName="TEXT_ITEM" Prompt="-" MaximumLength="100" Width="2155" XPosition="3038" YPosition="2390" Height=""></Field>
+<Field BlockName="PMT" Name="EXECUTOR" ColumnName="EXECUTOR" ParentName="TEXT_ITEM" Prompt="-" MaximumLength="50" Width="2155" XPosition="5219" YPosition="2384" Height=""></Field>
+<Field BlockName="PMT" Name="EXECUTOR_PHONE" ColumnName="EXECUTOR_PHONE" ParentName="TEXT_ITEM" Prompt="-" MaximumLength="50" Width="1600" XPosition="7401" YPosition="2384" Height=""></Field>
+<Field BlockName="PMT" Name="ACCOUNTER_NAME" ColumnName="accounter_name" ParentName="TEXT_ITEM" Prompt="-" MaximumLength="50" Width="2155" XPosition="5219" YPosition="635" Height=""></Field>
+<Field BlockName="PMT" Name="ACCOUNTER_POSITION" ColumnName="accounter_position" ParentName="TEXT_ITEM" Prompt="-" MaximumLength="100" Width="2155" XPosition="3038" YPosition="635" Height=""></Field>
+<Field BlockName="PMT" Name="ACCOUNTER_DATE" ColumnName="accounter_date" ParentName="TEXT_ITEM_DATE" Prompt="-" MaximumLength="" Width="" XPosition="7401" YPosition="635" Height=""></Field>
+<Field BlockName="PMT" Name="DOC_REG_DATE" ColumnName="DOC_REG_DATE" ParentName="TEXT_ITEM_DATE" Prompt="Дата регистрации" MaximumLength="" Width="" XPosition="6174" YPosition="1655" Height=""></Field>
+</Canvas>
+</TabPage>
+
+<TabPage TabPageName="Дополнительно(&amp;4)">
+<Canvas CanvasName="PMT24_STACKED" Multirow="N" ParentName="CANVAS_STACKED" Width="10000" Height="3352" ViewportWidth="9990" ViewportHeight="3342" ViewportXPosition="100" ViewportYPosition="1100">
+<Field BlockName="PMT" Name="KAZN_OPER_TYPE" ColumnName="KAZN_OPER_TYPE" ParentName="TEXT_ITEM" Prompt="Вид внутриказначейской операции" MaximumLength="2" Width="1000" XPosition="2472" YPosition="40" Height=""></Field>
+<Field BlockName="PMT" Name="LABEL_ACCESS" ColumnName="label_access" ParentName="TEXT_ITEM" Prompt="Уровень доступа" MaximumLength="1" Width="1000" XPosition="2472" YPosition="290" Height=""></Field>
+<Field BlockName="PMT" Name="ORDER_REMITTANCE_DATE_CUR" ColumnName="ORDER_REMITTANCE_DATE_CUR" ParentName="TEXT_ITEM_DATE" Prompt="Дата валютирования" MaximumLength="" Width="1000" XPosition="2472" YPosition="550" Height=""></Field>
+<Field BlockName="PMT" Name="BC_DOC_REG_NUMBER_FROM" ColumnName="BC_DOC_REG_NUMBER_FROM" ParentName="TEXT_ITEM" Prompt="Учетный номер обязательства для уточнения кассового расхода" MaximumLength="50" Width="1390" XPosition="4789" YPosition="870" Height="250"></Field>
+<Field BlockName="PMT" Name="BANK_CARD" ColumnName="BANK_CARD" ParentName="CHECKBOX" Prompt="Перечисление на банковские карты" MaximumLength="1" Width="200" XPosition="1808" YPosition="1170" Height="350"></Field>
+<Field BlockName="PMT" Name="AUTOBO" ColumnName="AUTOBO" ParentName="CHECKBOX" Prompt="Авто БО" MaximumLength="1" Width="169" XPosition="5363" YPosition="1170" Height="366"></Field>
+<Field BlockName="PMT" Name="ORDER_REMITTANCE_BEN" ColumnName="ORDER_REMITTANCE_ben" ParentName="CHECKBOX" Prompt="Отправка в банк из ЗК" MaximumLength="1" Width="200" XPosition="7336" YPosition="1170" Height="350"></Field>
+<Field BlockName="PMT" Name="PAYER_BANK_ACCOUNT" ColumnName="PAYER_BANK_ACCOUNT" ParentName="TEXT_ITEM" Prompt="Банк. счет" MaximumLength="20" Width="1979" XPosition="1125" YPosition="1630" Height=""></Field>
+<Field BlockName="PMT" Name="PAYER_BANK_BIK" ColumnName="PAYER_BANK_BIK" ParentName="TEXT_ITEM" Prompt="БИК/SWIFT" MaximumLength="11" Width="1600" XPosition="3981" YPosition="1630" Height=""></Field>
+<Field BlockName="PMT" Name="PAYER_BANK_KS" ColumnName="PAYER_BANK_KS" ParentName="TEXT_ITEM" Prompt="Кор. счет" MaximumLength="20" Width="1698" XPosition="6323" YPosition="1630" Height=""></Field>
+<Field BlockName="PMT" Name="PAYER_INN" ColumnName="PAYER_INN" ParentName="TEXT_ITEM" Prompt="ИНН" MaximumLength="16" Width="1200" XPosition="8696" YPosition="1630" Height=""></Field>
+<Field BlockName="PMT" Name="PAYER_BANK_NAME" ColumnName="PAYER_BANK_NAME" ParentName="TEXT_ITEM" Prompt="Банк" MaximumLength="160" Width="6896" XPosition="1125" YPosition="1880" Height=""></Field>
+<Field BlockName="PMT" Name="PAYER_KPP" ColumnName="PAYER_KPP" ParentName="TEXT_ITEM" Prompt="КПП" MaximumLength="9" Width="1200" XPosition="8696" YPosition="1880" Height=""></Field>
+<Field BlockName="PMT" Name="PREV_YEARS_FLAG" ColumnName="PREV_YEARS_FLAG" ParentName="CHECKBOX" Prompt="Средства прошлых лет" MaximumLength="1" Width="200" XPosition="791" YPosition="2378" Height="350"></Field>
+<Field BlockName="PMT" Name="ORDER_REMITTANCE_PURPORSE_3" ColumnName="ORDER_REMITTANCE_PURPORSE_3" ParentName="CHECKBOX" Prompt="За счет общего остатка" MaximumLength="1" Width="200" XPosition="2793" YPosition="2378" Height="350"></Field>
+<Field BlockName="PMT" Name="ORDER_REMITTANCE_PURPORSE_4" ColumnName="ORDER_REMITTANCE_PURPORSE_4" ParentName="CHECKBOX" Prompt="За счет средств без права расходования" MaximumLength="1" Width="200" XPosition="4966" YPosition="2378" Height="350"></Field>
+<Field BlockName="PMT" Name="AUTO_SANC" ColumnName="AUTO_SANC" ParentName="CHECKBOX" Prompt="Автосанкционирование" MaximumLength="1" Width="200" XPosition="7971" YPosition="2378" Height="350"></Field>
+</Canvas>
+</TabPage>
+
+<TabCanvas Name="TAB_CNV">
+<TabPage_ Name="MAIN_PAGE" Label="Раздел 1,2 (&amp;1)" />
+<TabPage_ Name="ATTRIBUTE_PAGE" Label="Раздел 3,4,5(&amp;2)" />
+<TabPage_ Name="SIG_PAGE" Label="Подписи(&amp;3)" />
+<TabPage_ Name="DOP" Label="Дополнительно(&amp;4)" />
+</TabCanvas>
+
+</Form>

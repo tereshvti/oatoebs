@@ -1,0 +1,4 @@
+﻿$('.modal[aria-hidden=false]').modal('hide')
+$('.steps_container').html('<h3> <%=j @script.name %> </h3>')
+$('.steps_container').append('<%=j link_to '[удалить]', destroy_script_path(@script), remote: true, data: { confirm: "вы уверены?" } %>')
+$('.steps_container').append('<%=j render partial: 'tss/steps', locals: { script: @script } %> ')

@@ -1,0 +1,7 @@
+﻿<div class="head2">TR - Операции по тех.регламенту</div>
+<%= form_tag trs_index_path, :method => "get" do %>
+	<%= render 's_trs' %>
+<% end %>
+<%= will_paginate @trs %>
+<%= render 't_trs', trs:@trs %>
+<%= will_paginate @trs %>

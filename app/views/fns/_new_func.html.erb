@@ -1,0 +1,51 @@
+﻿<div id="addCommentContainer">
+	<%= render "modal" %>
+	<%= form_tag("/fns/find_all", class: "find_all", remote: true) do %>
+		<%= label_tag "СПТО код:" %><%= text_field_tag 'spto', '' %>
+		<%= submit_tag "Найти" %>
+	<% end %>
+	<br/><br/>
+	<%= form_tag("/fns/create", class: "create_function") do %>
+		<%= label_tag "Имя функции",nil, class: "fieldset_name" %>
+		<%= text_field_tag 'name', '', class: 'new_func_name', size:"100" %> </br>
+		<%= label_tag "Описание функции",nil, class: "fieldset_name" %>
+		<%= text_area_tag 'description', '', size: "100x4" %> </br>
+		<%= hidden_field_tag 'tr_id', '', class: "tr_id" %>
+		<%= hidden_field_tag 'tr_ev_id', '', class: "tr_ev_id" %>
+		<%= hidden_field_tag 'tr_act_id', '', class: "tr_act_id" %>
+		<%= hidden_field_tag 'tr_op_id', '', class: "tr_op_id" %>
+		<table class="table">
+		<tbody>
+			<tr>
+				<th>ТР операция</th>  
+				<td><div id="tr"></div></td>
+				<td><button class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal1">Найти</button></td>
+			</tr>
+
+			<tr>
+				<th>Событие ППО</th>  
+				<td><div id="tr_ev"></div></td>
+				<td><button class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal4">Найти</button></td>
+			</tr>
+			
+			<tr>
+				<th>xxt_bs_tr_actions_v</th>
+				<td><div id="tr_act"></div></td>
+				<td><button class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal2">Найти</button></td>
+			</tr>				
+			<tr>
+				<th>xxt_bs_operations</th>
+				<td><div id="tr_op"></td>
+				<td><button class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal3">Найти</button></td>
+			</tr>
+		</tbody>
+		</table>
+		
+		<button type="button" class="btn btn-primary btn-sm" id="add_arg">Добавить аргумент функции</button> </br>
+		<table>
+			<tr><td><%= label_tag "Форма?" %><%= label_tag "Имя аргумента" %><%= label_tag "Описание аргумента" %></td></tr>
+			<tr><td><div id="arguments"></div></td></tr>
+		</table>
+		<%= submit_tag "Создать" %>
+	<% end %>
+</div>

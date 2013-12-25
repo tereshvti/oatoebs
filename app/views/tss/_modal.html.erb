@@ -1,0 +1,42 @@
+﻿<!-- Modal -->
+<div class="modal fade" id="newSuite" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Создание набора</h4>
+      </div>
+      <div class="modal-body">
+		<%= form_tag("/create_suite", remote: true) do %>
+			<%= label_tag "Имя набора" %>
+			<%= text_field_tag "suite_name" %></br>
+			<%= submit_tag "Сохранить", class: "btn btn-primary" %>
+		<% end %>
+		</br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="newScript" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Создание скрипта</h4>
+      </div>
+      <div class="modal-body">
+		<%= form_tag("/create_script", remote: true) do %>
+			<%= label_tag "Имя набора" %>
+			<%= select_tag "suite_id", options_from_collection_for_select(Suite.all, "id", "name"), prompt: "Выберите набор", class: 'suite_select' %></br>
+			<%= label_tag "Имя скрипта" %>
+			<%= text_field_tag "script_name" %> </br>
+			<%= label_tag "Отвественный" %>
+			<%= text_field_tag "responsible" %> </br>
+			<%= submit_tag "Сохранить", class: "btn btn-primary" %>
+		<% end %>
+		</br>
+      </div>
+    </div>
+  </div>
+</div>

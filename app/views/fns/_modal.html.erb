@@ -1,0 +1,84 @@
+﻿<!-- Modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Поиск операции тех. тегламента</h4>
+			</div>
+			<div class="modal-body">
+				<%= form_tag(find_tr_path, remote: true, class: "form-inline search_tr") do %>
+					<%= render 'trs/s_trs' %>
+				<% end %>
+				</br>
+				<div class="tr_place"> </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Выбрано!</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Поиск операции</h4>
+			</div>
+			<div class="modal-body">
+				<%= form_tag(find_tr_act_path, remote: true, class: "form-inline search_tr_act") do %>
+					<%= render 'ats/s_ats' %>
+				<% end %>
+				</br>
+				<div class="tr_act_place"> </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Выбрано!</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Поиск операции</h4>
+			</div>
+			<div class="modal-body">
+				<%= form_tag(find_tr_op_path, remote: true, class: "form-inline search_tr_op") do %>
+					<%= render 'obs/s_obs' %>
+				<% end %>
+				</br>
+				<div class="tr_op_place"> </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Выбрано!</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Поиск события ППО</h4>
+			</div>
+			<div class="modal-body">
+				<%= form_tag(find_tr_ev_path, remote: true, class: "form-inline search_tr_ev") do %>
+					<%= render 'evs/s_evs' %>
+				<% end %>
+				</br>
+				<div class="tr_ev_place"> </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Выбрано!</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

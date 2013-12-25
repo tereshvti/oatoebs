@@ -1,0 +1,10 @@
+﻿<div class="page-header">
+  <h1><%= @script.name %> <small><%= @script.responsible %></small></h1>
+	<%= button_to(destroy_script_path(@script), class: 'btn btn-primary btn-lg', remote: true, data: { confirm: "Вы уверены что хотите удалить скрипт ?" }) do %>
+		<span class="glyphicon glyphicon-trash"></span>
+	<% end %>
+</div>
+<% @script.steps.each do |s| %>
+	<% @step = s %>
+	<%= render "step", locals: { step: @step } %>
+<% end %>

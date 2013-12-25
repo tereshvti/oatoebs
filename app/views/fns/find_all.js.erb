@@ -1,0 +1,46 @@
+﻿$('input#tr_id').val('')
+$('input#tr_ev_id').val('')
+$('input#tr_act_id').val('')
+$('input#tr_op_id').val('')
+
+<% if @trs.count.eql? 1 %>
+	$('input#tr_id').val('<%= @trs.first.id %>')
+	$('div#tr').html('<%=j render partial: 'fns/sm_tr', locals: {tr: @trs.first} %>')
+<% elsif @trs.count.eql? 0 %>
+	$('div#tr').html('Ничего не найдено')
+<% else %>
+	$('.event').val('<%= @spto %>')
+	$('div#tr').html('Найдено <%= @trs.count %> записей, уточните')
+<% end %>
+
+<% if @evs.count.eql? 1 %>
+	$('input#tr_ev_id').val('<%= @evs.first.id %>')
+	$('div#tr_ev').html('<%=j render partial: 'fns/sm_tr_ev', locals: {tr_ev: @evs.first} %>')
+<% elsif @evs.count.eql? 0 %>
+	$('div#tr_ev').html('Ничего не найдено')
+<% else %>
+	$('.event').val('<%= @spto %>')
+	$('div#tr_ev').html('Найдено <%= @evs.count %> записей, уточните')
+<% end %>
+
+<% if @ats.count.eql? 1 %>
+	$('input#tr_act_id').val('<%= @ats.first.id %>')
+	$('div#tr_act').html('<%=j render partial: 'fns/sm_tr_act', locals: {tr_act: @ats.first} %>')
+<% elsif @ats.count.eql? 0 %>
+	$('div#tr_act').html('Ничего не найдено')
+<% else %>
+	$('.doc_group').val('<%= @gr %>')
+	$('.event').val('<%= @spto %>')
+	$('div#tr_act').html('Найдено <%= @ats.count %> записей, уточните')
+<% end %>
+
+<% if @obs.count.eql? 1 %>
+	$('input#tr_op_id').val('<%= @obs.first.id %>')
+	$('div#tr_op').html('<%=j render partial: 'fns/sm_tr_op', locals: {tr_op: @obs.first} %>')
+<% elsif @obs.count.eql? 0 %>
+	$('div#tr_op').html('Ничего не найдено')
+<% else %>
+	$('.doc_group').val('<%= @gr %>')
+	$('.event').val('<%= @spto %>')
+	$('div#tr_op').html('Найдено <%= @obs.count %> записей, уточните')
+<% end %>

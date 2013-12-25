@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  code: 
+  name: 
+  group_document: MyString
+
+two:
+  code: 
+  name: 
+  group_document: MyString

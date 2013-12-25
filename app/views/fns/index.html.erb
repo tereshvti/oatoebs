@@ -1,0 +1,18 @@
+﻿<div class="head2">Функции</div>
+<button type="button" class="btn btn-primary btn-sm" id="add_func">Добавить функцию</button> </br></br>
+<div id="new_func">
+  <%= render "new_func" %>
+</div>
+
+<div class="nav_cont">
+	<%= form_tag fns_index_path, :method => "get" do %>
+		<%= render 's_fns' %>
+	<% end %>
+
+	<%= will_paginate @fns %>
+		<%= render 't_fns', fns:@fns %>
+	<%= will_paginate @fns %>
+</div>
+
+
+

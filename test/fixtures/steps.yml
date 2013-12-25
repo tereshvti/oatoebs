@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  function_id: 1
+  script_id: 1
+  previous_step_id: 1
+
+two:
+  function_id: 1
+  script_id: 1
+  previous_step_id: 1

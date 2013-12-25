@@ -1,0 +1,18 @@
+﻿<ul class="suites">
+	<% Suite.all.order(:name).each do |suite| %>
+	   <li>
+	        <%= link_to suite.name, '#', class: 'suite_link' %>
+			<%= link_to(destroy_suite_path(suite), remote: true, data: { confirm: "Вы уверены?" }) do %>
+				<span class="glyphicon glyphicon-trash"></span>
+			<% end %>
+		    <% if suite.scripts %>
+			    <div class='scripts' >
+				<% suite.scripts.order(:name).each do |scr| %>
+				  <%= link_to scr.name, get_steps_path(scr), remote: true %>
+				  </br>
+				<% end %>
+			  </div>
+			<% end %>
+		</li>
+	<% end %>
+</ul>

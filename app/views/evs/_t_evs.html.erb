@@ -1,0 +1,26 @@
+﻿<table width=100% class="gtable">
+<thead>
+	<tr>
+		<th></th>
+		<th>doc</th>
+		<th>action</th> 
+		<th>description</th>
+		<th>eventbegin</th>	 
+		<th>revision</th> 
+		<th>revdate</th> 
+	</tr>
+</thead>
+<tbody>
+	<% @evs.each { |f|  %>
+		<tr>
+			<td class="tr_ev_check"><%= radio_button_tag 'tr_ev_id', f.id %></td>
+			<td><%= f.doc %></td>
+			<td><%= f.action %></td>
+			<td><%= f.description %></td>	 
+			<td><%= f.eventbegin %></td>
+			<td><%= f.revision %></td>
+			<td><%= f.revdate %></td>
+		</tr>
+	<% } %>
+	</tbody>
+</table>

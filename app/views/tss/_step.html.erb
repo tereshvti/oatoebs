@@ -1,0 +1,40 @@
+﻿<div id="step">
+	<div class="well">
+		<legend>
+			#<%= @step.order %>
+			<%= @step.function.name %>
+		</legend>
+		<button type="button" class="btn btn-sm" id="show_summary_func">Показать описание функции</button> </br>
+		<div id="summary_func">
+			<%= render "fns/summary_func", step:@step %>
+		</div>		
+		<% unless @step.function.arguments.empty? %>
+			<div class="arguments" >
+				Аргументы:</br>
+				<ol>
+				<% @step.function.arguments.each do |arg| %>
+					<li class="func_arg">
+						<% if arg.form %>
+							<div class="form_place">
+								<% @form = Form.new %> 
+								<% @form.init(arg.name + '.xml') %>
+								<% @form.input_by_guid 'lol' %>
+								<%= render 'fms/form', object: @form, as: 'form' %>
+							<div>
+							</br>
+						<% else %>
+							<%= form_tag("/create_arg_instance", remote: true, class: "inline new_instance") do %>
+								<%= hidden_field_tag 'step_arg_ids', "#{@step.id}_#{arg.id}" %>
+								<%= label_tag arg.description, arg.description+' ('+arg.name+')', :style=>"font-size: 11px; width:350px;" %>
+								<% arg.argument_instances.find_by_step_id(@step) ? value = arg.argument_instances.find_by_step_id(@step).value : value = '' %>
+								<%= text_field_tag 'value', value, size: 80 %>
+								<%= submit_tag "Сохранить аргумент" %>
+							<% end %>
+						<% end %>
+					</li>
+				<% end %>
+				</ol>
+			</div>
+		<% end %>
+	</div>
+</div>

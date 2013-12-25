@@ -1,0 +1,9 @@
+﻿<div class="head2">Операции</div>
+
+<%= form_tag obs_index_path, :method => "get" do %>
+	<%= render 's_obs' %>
+<% end %>
+
+<%= will_paginate @obs %>
+<%= render 't_obs', obs:@obs %>
+<%= will_paginate @obs %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  spto45roottag: MyString
+  doc: MyString
+  action: MyString
+  description: MyString
+  eventbegin: MyString
+  revision: MyString
+  revdate: 2013-11-24
+
+two:
+  spto45roottag: MyString
+  doc: MyString
+  action: MyString
+  description: MyString
+  eventbegin: MyString
+  revision: MyString
+  revdate: 2013-11-24

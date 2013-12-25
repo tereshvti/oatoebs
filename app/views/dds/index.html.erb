@@ -1,0 +1,38 @@
+﻿<div class="head2">Группы и типы документов</div>
+<div class="nav_cont">
+<%= form_tag dds_index_path, :method => "get" do %>
+    <%= label_tag(:search, "Search:") %>
+    <%= text_field_tag :doc_group, params[:doc_group] %>
+    <%= text_field_tag :doc_type, params[:doc_type] %>	
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+<%= will_paginate @ddts %>
+	 <table width=100% class="gtable">
+	 <thead>
+	<tr>
+	 <th>group_doc</th>
+	 <th>group_name</th>
+	 <th>code</th>
+	 <th>name</th> 
+	 </tr>
+	 </thead>
+	 <tbody>
+  <% @ddts.each { |f|  %>
+	 
+	 <tr>
+	 <td><%= f.group_document %></td>
+	 <td>
+		 <% if f.xxt_rd_doc_group %>
+			<%= f.xxt_rd_doc_group.name %>
+		 <% end %>
+	 </td>	 
+	 <td><%= f.code %></td>
+	 <td><%= f.name %></td>
+	 </tr>
+	
+  <% } %>
+  </tbody>
+   </table>
+   <%= will_paginate @ddts %>
+</div>   

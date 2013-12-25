@@ -1,0 +1,4 @@
+﻿$('.steps_container').empty()
+$('.steps_container').append('<%=j render partial: 'tss/steps', locals: { script: @script } %> ')
+$('#newStep').remove()
+$('.modal_place').append('<%=j render partial: 'tss/new_step', locals: { script: @script } %>')

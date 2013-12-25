@@ -1,0 +1,52 @@
+﻿<table width=100% class="gtable">
+<thead>
+	<tr>
+		<th></th>
+		<th>id</th>
+		<th>name [ description ]</th>
+		<th>tr</th>
+		<th>tr_ev</th>		
+		<th>tr_act</th>
+		<th>tr_op</th>
+		<th>arguments</th>		
+		<th></th>
+		<th></th>
+	</tr>
+</thead>
+<tbody>
+	<% @fns.each { |f|  %>
+		<tr>
+			<td class="fn_check"><%= radio_button_tag 'fn_id', f.id %></td>
+			<td><%= f.id %><br/></td>
+			<td><%= f.name %><br/>[ <%= f.description %> ]</td>
+			<td>
+			<% if f.tr_operation %>
+				<%= render 'fns/sm_tr', tr:f.tr_operation %>
+			<% end %>	
+			</td>
+			<td>
+			<% if f.tr_event %>
+				<%= render 'fns/sm_tr_ev', tr_ev:f.tr_event %>
+			<% end %>	
+			</td>			
+			<td>
+			<% if f.xxt_bs_tr_actions_v %>
+				<%= render 'fns/sm_tr_act', tr_act:f.xxt_bs_tr_actions_v %>
+			<% end %>
+			</td>	 
+			<td>
+			<% if f.xxt_bs_operation %>
+				<%= render 'fns/sm_tr_op', tr_op:f.xxt_bs_operation %>
+			<% end %>
+			</td>	 
+			<td>
+			<% f.arguments.each do |arg| %>
+				<%= arg.name %><br/>
+			<% end %>
+			</td>			
+			<td><%= link_to 'Си-код', '' %></td>		 
+			<td><%= link_to 'Удалить', fns_delete_path(f) %></td>
+		</tr>
+	<% } %>
+	</tbody>
+</table>

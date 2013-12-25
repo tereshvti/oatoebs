@@ -1,0 +1,7 @@
+﻿.gtable {border:1px solid #ccc; background:#f7f7f7; } 
+.gtable th {background:#eaeaea; padding:5px;border-bottom:1px solid #ccc;font-weight:bold;font-size:13px;font-family:tahoma; 
+color:#555;text-shadow:1px 1px 0px #fff;} 
+.gtable td{padding:5px; font-family:tahoma;font-size:11px; } 
+.gtable tr:nth-child(odd) {background: #f7f7f7}
+.gtable tr:nth-child(even) {background: #eaeaea}
+.gtable tr:hover {background: #ffffff;}

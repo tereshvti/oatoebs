@@ -1,0 +1,110 @@
+﻿<div class="form_place">
+	<h4> Заполнить из БД </h4>
+	<%= form_tag('/fms/show', class: 'form-search', remote: true) do -%>
+		<%= label_tag "Введите GUID" %>
+		<%= hidden_field_tag 'form_name', @form.name %>
+		<%= text_field_tag 'guid', nil, class: 'input-large search-query' %>
+		<%= submit_tag 'Загрузить' %>
+	<% end -%>
+	</br>
+	<% puts @form.multirow_hash %>
+	<% scale=14 %>
+	<% scale_t=scale*6 %>
+	<div style="width:<%= 10300/scale+40 %>px; magin:auto;">
+		<%= form_for(:my_hash, url: '/' ) do |f| -%>
+			<div id="tabs"  style="box-shadow: 0 0 10px 2px #1A3457; -webkit-box-shadow: 0 0 10px 2px #1A3457; -moz-box-shadow: 0 0 10px 2px #1A3457;">
+				<ul>
+					<% @form.tabs.each do |tab| %>
+						<li><%= link_to tab.get_attribute('TabPageName').gsub(' ','_'), "#" + tab.get_attribute('TabPageName').gsub(' ','_') %></li>
+					<% end %>
+				</ul>
+				<div class="row">
+					<% @form.tabs.each do |tab| %>			
+						<div id=<%= tab.get_attribute('TabPageName').gsub(' ','_') %>  >
+							<div style="position:relative; display:block; background:#ccccff; width:<%= 10300/scale %>px; height:<%= 6000/scale %>px;-webkit-border-radius: 5px;-moz-border-radius: 5px; border-radius: 5px; ">
+								<% tab.search('Canvas').each do |canvas| %>
+									<div style="display:block; background:#ddddff; position:absolute; -webkit-border-radius: 5px;-moz-border-radius: 5px; border-radius: 5px; 
+										left: <%= canvas.get_attribute('ViewportXPosition').to_i/scale %>px; 
+										top:<%= canvas.get_attribute('ViewportYPosition').to_i/scale %>px; 
+										width:<%= canvas.get_attribute('ViewportWidth').to_i/scale %>px; 
+										height:<%= canvas.get_attribute('ViewportHeight').to_i/scale %>px;">
+							
+										<p> <% canvas.get_attribute('CanvasName') %> </p>							
+
+										<% if canvas.get_attribute('Multirow').eql? 'N' %>								
+											<% canvas.search('Field').each do |field| %>									
+												<div class="fieldValueArea" style="position:absolute; left: <%= field.get_attribute('XPosition').to_i/scale %>px; top: <%= field.get_attribute('YPosition').to_i/scale %>px; font-family: tahoma; font-size: 10px;">
+													<% if field.get_attribute('ParentName').eql? 'TEXT_ITEM_MULTILINE' %>										  
+														<textarea name="my_hash[<%= field.get_attribute('BlockName') %>][<%= canvas.get_attribute('CanvasName') %>][<%= field.get_attribute('Name') %>]" style="width: <%= field.get_attribute('Width').to_i/scale %>px; height: <%= field.get_attribute('Height').to_i/scale %>px;"><%= field.content %></textarea>											
+													<% else %>
+														<% if field.get_attribute('ParentName').eql? 'CHECKBOX' %>
+															<input type="checkbox" name="my_hash[<%= field.get_attribute('BlockName') %>][<%= canvas.get_attribute('CanvasName') %>][<%= field.get_attribute('Name') %>]"  value="<%= field.content %>" size= <%= field.get_attribute('Width').to_i/scale_t %> />										  
+														<% else %>
+															<input type="text" name="my_hash[<%= field.get_attribute('BlockName') %>][<%= canvas.get_attribute('CanvasName') %>][<%= field.get_attribute('Name') %>]"  value="<%= field.content %>" size= <%= field.get_attribute('Width').to_i/scale_t %> />
+														<% end %>
+													<% end %>
+												</div>
+												<% w=field.get_attribute('Prompt').to_s.length*5 %>
+												<div style=" text-align:right; width:<%=w%>px; position:absolute; left: <%= field.get_attribute('XPosition').to_i/scale-w-3%>px; top: <%= field.get_attribute('YPosition').to_i/scale %>px; font-family: tahoma; font-size: 8px;">
+													<label for "exp" style="display: block; width:<%=  %>px;" ><%= field.get_attribute('Prompt')%></label>
+												</div>									
+											<% end %>								
+										<% else %>						
+											<% col_names = []; lines = [] %>
+											<% if @form.multirow_hash %>
+												<% @form.multirow_hash.each do |k, v| %>
+													<% ary_to_compare = [] %>
+													<% canvas.children.each do |elem| %>
+														<% unless elem.get_attribute('ColumnName').nil? %>
+															<% ary_to_compare << elem.get_attribute('ColumnName').upcase %>
+														<% end %>
+													<% end %>	
+													<% puts k %>
+													<% puts '----------------' %>
+													<% puts ary_to_compare %>
+													<% puts '----------------' %>
+													<% puts k - ary_to_compare %>
+													<% puts '================' %>
+													<% if (k - ary_to_compare).empty? %>
+
+														<% col_names = k %>
+														<% lines = v %>
+														<%= link_to 'Добавить строку', '#', class: 'add_string' %>	
+														<table>
+														<tbody>
+															
+															<tr>
+																<td> </td>
+																<% canvas.search('Field').each do |field| %>
+																	<td><%= f.label "explanation", field.get_attribute('Prompt'), class:"lab" %></td>
+																<% end %>	
+															</tr>
+															<% lines.each do |line| %>
+																<tr>
+																	<td><td><%= link_to 'Удалить строку', '#', class: 'del_string' %></td>  </td>
+																	<% canvas.search('Field').each do |field| %>
+																		<td>
+																			<input type="text" class="lab" name="my_hash[<%= field.get_attribute('BlockName') %>][<%= canvas.get_attribute('CanvasName') %>][<%= field.get_attribute('Name') %>][<%= lines.index(line).to_s %>]" value="<%= line[col_names.find_index(field.get_attribute('ColumnName').upcase)] %>" size="10" />																				
+																		</td>										
+																	<% end %>
+																</tr>
+															<% end %>								
+														</tbody>		
+														</table>
+													<% end %>
+												<% end %>
+											<% end %>
+										<% end %>
+									</div>	
+								<% end %>
+							</div>
+						</div>	
+					<% end %>
+				</div>
+			</div>				
+			<%= hidden_field :type, params[:type] %>
+			<%= submit_tag 'Сохранить' %>
+		<% end -%>
+		
+	</div>
+</div>

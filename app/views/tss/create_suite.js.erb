@@ -1,0 +1,8 @@
+$('.navi_container').html('<%=j render partial: 'tss/navi' %>')
+$('.suite_select').append(function() {
+  return $('<option>', {
+    value: '<%= @suite.id %>',
+	html: '<%= @suite.name %>'
+  });
+});
+$('.modal[aria-hidden=false]').modal('hide')

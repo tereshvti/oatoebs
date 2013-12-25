@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  formname: MyString
+  blockname: MyString
+  sql: MyString
+
+two:
+  formname: MyString
+  blockname: MyString
+  sql: MyString

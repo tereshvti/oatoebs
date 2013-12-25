@@ -1,0 +1,59 @@
+﻿BODY, P, UL, OL, DL, LI, TD, TEXTAREA, INPUT, SELECT, BUTTON, option, optgroup {
+font-family: Arial,Sans-Serif;
+font-size: 12px;
+color: black;
+margin:0;
+padding:0;
+}
+
+.modal-dialog {
+width: 90%; /* desired relative width */
+left: 5%; /* (100%-width)/2 */
+/* place center */
+margin-left:auto;
+margin-right:auto; 
+}
+
+.head1 {
+font-size:18px;
+padding:10px;
+background: #aaaaaa; 
+color: white;
+height: 35px;
+border-bottom:1px solid #000;
+text-shadow:1px 1px 0px black;
+}
+
+.head2 {
+font-size:18px;
+margin-left: 20px;
+margin-right: 20px; 
+color: silver;
+height: 35px;
+border-bottom:1px solid #000;
+text-shadow:1px 1px 0px black;
+margin-bottom:5px;
+}
+.nav_cont {
+width: 1060px; 
+margin: auto;
+margin-bottom:40px;
+-moz-box-shadow:2px 2px 0 #c2c2c2;
+-webkit-box-shadow:2px 2px 0 #c2c2c2;
+box-shadow:2px 2px 0 #c2c2c2;
+}
+
+.nav_cont_m {
+width: 1060px; 
+margin: auto;
+}
+
+.fieldValueArea {
+width:120px;
+}
+
+.lab {
+font-family: Tahoma,Arial,Sans-Serif;
+font-size: 8px;
+}
+

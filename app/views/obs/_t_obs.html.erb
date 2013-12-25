@@ -1,0 +1,32 @@
+﻿<table width=100% class="gtable">
+<thead>
+	<tr>
+		<th></th>
+		<th>doc_group_code</th>
+		<th>user_operation_name</th>
+		<th>operation_id</th>
+		<th>operation_code</th>
+		<th>stored_proc_name</th>
+		<th>techregl_code</th>
+		<th>techregl_select</th>
+		<th>initialization_type</th>
+		<th>group_oper_flag</th>
+	</tr>
+</thead>
+<tbody>
+	<% @obs.each { |f|  %>
+		<tr>
+			<td class="tr_op_check"><%= radio_button_tag 'tr_op_id', f.id %></td>
+			<td><%= link_to f.doc_group_code, {controller:"dds", action:"index", :doc_group=>f.doc_group_code} %></td>		 
+			<td><%= f.user_operation_name %></td>
+			<td><%= link_to f.operation_id, {controller:"obs", action:"show", :operation_id=>f.operation_id} %></td>	 
+			<td><%= f.operation_code %></td>
+			<td><%= f.stored_proc_name %></td>
+			<td><%= f.techregl_code %></td>
+			<td><%= f.techregl_select %></td>
+			<td><%= f.initialization_type %></td>
+			<td><%= f.group_oper_flag %></td>
+		</tr>
+	<% } %>
+</tbody>
+</table>

@@ -1,0 +1,7 @@
+﻿<div class="head2">EV - События ППО</div>
+<%= form_tag evs_index_path, :method => "get" do %>
+	<%= render 's_evs' %>
+<% end %>
+<%= will_paginate @evs %>
+<%= render 't_evs', evs:@evs %>
+<%= will_paginate @evs %>

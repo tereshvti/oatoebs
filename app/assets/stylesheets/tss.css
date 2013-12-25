@@ -1,0 +1,56 @@
+﻿.arg_name {
+width:100px;
+}
+.func_arg {
+margin:5px;
+}
+.navi_container {
+float: left;
+width: 250px;
+}
+
+.steps_container {
+margin-left: 10px;
+}
+.scripts { margin-left: 30px; display: none }
+.suites { margin-left: 30px }
+
+#slideout {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+#slideout_inner {
+  position: fixed;
+  top: 100px;
+  left: -250px;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+	background-color:#000000; border:1px solid #333333;
+	/* Internet Explorer */
+	filter:alpha(opacity=50);
+	/* CSS3 standard */
+	opacity:0.5;
+	color:#000;
+	padding:10px;
+		border-right: none;
+
+	-webkit-border-radius: 0 10px 10px 0;
+	-moz-border-radius: 0 10px 10px 0;
+	border-radius: 0 10px 10px 0;
+  }
+  
+ #slideout_inner li a:link { color:#fff;} 
+  
+#slideout:hover {
+  left: 250px;
+}
+#slideout:hover #slideout_inner {
+  left: 0;
+}

@@ -1,0 +1,24 @@
+﻿<div class="head2">Тесты</div>
+<div class="modal_place">
+	<%= render 'tss/modal' %>
+</div>
+
+<div class="panel-default">
+	<button class="btn btn-default btn-xs" data-toggle="modal" data-target="#newSuite">Новый набор</button>
+	<button class="btn btn-default btn-xs" data-toggle="modal" data-target="#newScript">Новый скрипт</button>
+	<button class="btn btn-default btn-xs" data-toggle="modal" data-target="#newStep">Новый шаг</button>
+</div>
+
+<div id="slideout">
+  <div id="slideout_inner">
+		<div class="navi_container">
+			<%= render "navi", suites: @suites %>
+		</div>
+  </div>
+</div>
+
+<div class="steps_container">
+</div>
+
+
+

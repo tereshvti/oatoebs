@@ -1,0 +1,38 @@
+﻿<div class="modal fade" id="newStep" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Создание шага</h4>
+      </div>
+	  <div class="modal-body">
+	  <h3> Найти функцию </h3>
+	  <div class="find_function">
+		<%= form_tag("/find_function", remote: true) do %>
+			<%= label_tag "Имя функции" %>
+			<%= text_field_tag 'function_name'  %>
+			<%= button_tag(class: 'btn btn-default btn-xs') do %>
+				<span class="glyphicon glyphicon-search"></span>
+			<% end %>
+		<% end %>
+	  </div>
+	  
+	  <% if script %>
+		<%= form_tag("/create_step", remote: true, class: "new_step") do %>
+			<%= label_tag "Имя набора" %>
+			<%= text_field_tag 'script_name', script.suite.name, disabled: true  %></br>
+			<%= label_tag "Имя скрипта" %>
+			<%= hidden_field_tag "script_id", script.id, class: 'script_id' %>
+			<%= text_field_tag 'script_name', script.name, disabled: true  %></br>
+		
+			</br>
+			<div class="func_table">
+			</div>
+			<%= submit_tag "Создать шаг", class: "btn btn-primary" %>
+		<% end %>
+	  <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>

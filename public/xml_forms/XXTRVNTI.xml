@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form>
+
+<TabPage TabPageName="Документ (&amp;1)">
+<Canvas CanvasName="CNV_TOP" Multirow="N" ParentName="CANVAS_STACKED" Width="10000" Height="350" ViewportWidth="10000" ViewportHeight="350" ViewportXPosition="0" ViewportYPosition="0">
+<Field BlockName="DOC_HEADERS" Name="DOC_NUMBER" ColumnName="DOC_NUMBER" ParentName="TEXT_ITEM" Prompt="Номер документа" MaximumLength="50" Width="1800" XPosition="1500" YPosition="50" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="DOC_DATE" ColumnName="DOC_DATE" ParentName="TEXT_ITEM_DATE" Prompt="Дата документа" MaximumLength="" Width="" XPosition="4800" YPosition="50" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="UOM" ColumnName="UOM" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="Единица измерения" MaximumLength="6" Width="400" XPosition="7500" YPosition="50" Height=""></Field>
+</Canvas>
+
+<Canvas CanvasName="CANVAS_ST1" Multirow="N" ParentName="CANVAS_STACKED_FIXED_FIELD" Width="9700" Height="4800" ViewportWidth="9700" ViewportHeight="4800" ViewportXPosition="150" ViewportYPosition="700">
+<Field BlockName="DOC_HEADERS" Name="CODE_DATE" ColumnName="CODE_DATE" ParentName="TEXT_ITEM_DATE" Prompt="Дата" MaximumLength="" Width="" XPosition="8300" YPosition="50" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="SU_NAME" ColumnName="SU_NAME" ParentName="TEXT_ITEM" Prompt="ПБС, АД, АИФ" MaximumLength="2000" Width="4000" XPosition="2600" YPosition="300" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="SU_CODE" ColumnName="SU_CODE" ParentName="TEXT_ITEM" Prompt="по Сводному реестру" MaximumLength="15" Width="1200" XPosition="8300" YPosition="300" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="PPP_NAME" ColumnName="PPP_NAME" ParentName="TEXT_ITEM" Prompt="ГРБС, ГАДБ, ГАИФ" MaximumLength="2000" Width="4000" XPosition="2600" YPosition="550" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="PPP_CODE" ColumnName="PPP_CODE" ParentName="TEXT_ITEM" Prompt="Глава по БК" MaximumLength="3" Width="1200" XPosition="8300" YPosition="550" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="BUDGET_NAME" ColumnName="BUDGET_NAME" ParentName="TEXT_ITEM" Prompt="Наименование бюджета" MaximumLength="512" Width="4000" XPosition="2600" YPosition="800" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="FIN_ORG_NAME" ColumnName="FIN_ORG_NAME" ParentName="TEXT_ITEM" Prompt="Финансовый орган" MaximumLength="2000" Width="4000" XPosition="2600" YPosition="1050" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="PA_CODE" ColumnName="PA_CODE" ParentName="TEXT_ITEM" Prompt="Номер лицевого счета" MaximumLength="14" Width="1200" XPosition="8300" YPosition="1050" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="TOFK_NAME" ColumnName="TOFK_NAME" ParentName="TEXT_ITEM" Prompt="Федеральное казначейство, орган&amp;#10;Федерального казначейства" MaximumLength="2000" Width="4000" XPosition="2600" YPosition="1550" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="TOFK_CODE" ColumnName="TOFK_CODE" ParentName="TEXT_ITEM" Prompt="по КОФК" MaximumLength="4" Width="1200" XPosition="8300" YPosition="1550" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="PAYER_NAME" ColumnName="PAYER_NAME" ParentName="TEXT_ITEM" Prompt="Плательщик" MaximumLength="160" Width="4000" XPosition="2600" YPosition="1800" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="PAYER_INN" ColumnName="PAYER_INN" ParentName="XXT_INN" Prompt="ИНН" MaximumLength="" Width="1200" XPosition="8300" YPosition="1800" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="PAYER_PASSPORT" ColumnName="PAYER_PASSPORT" ParentName="TEXT_ITEM" Prompt="Паспортные данные плательщика" MaximumLength="1000" Width="4000" XPosition="2600" YPosition="2050" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="PAYER_KPP" ColumnName="PAYER_KPP" ParentName="XXT_KPP" Prompt="КПП" MaximumLength="" Width="1200" XPosition="8300" YPosition="2050" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="PAYER_BANK_ACCOUNT" ColumnName="PAYER_BANK_ACCOUNT" ParentName="TEXT_ITEM" Prompt="Номер банковского счета плательщика" MaximumLength="20" Width="2000" XPosition="7500" YPosition="2300" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="REQUEST_NUM" ColumnName="REQUEST_NUM" ParentName="TEXT_ITEM" Prompt="Номер запроса" MaximumLength="15" Width="1200" XPosition="8300" YPosition="2750" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="REQUEST_DATE" ColumnName="REQUEST_DATE" ParentName="TEXT_ITEM_DATE" Prompt="Дата запроса" MaximumLength="" Width="1200" XPosition="8300" YPosition="3000" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="FUND_SOURCE_CODE" ColumnName="FUND_SOURCE_CODE" ParentName="TEXT_ITEM" Prompt="Вид средств" MaximumLength="2" Width="1200" XPosition="8300" YPosition="3500" Height=""></Field>
+</Canvas>
+</TabPage>
+
+<TabPage TabPageName="Платежные документы (&amp;2)">
+<Canvas CanvasName="CANVAS_ST3" Multirow="Y" ParentName="CANVAS_STACKED" Width="100000" Height="2200" ViewportWidth="100000" ViewportHeight="2200" ViewportXPosition="350" ViewportYPosition="900">
+<Field BlockName="DOC_LINES1" Name="LINE_NUMBER1" ColumnName="LINE_NUMBER1" ParentName="TEXT_ITEM" Prompt="№ п/п" MaximumLength="16" Width="450" XPosition="0" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="DOC_NAME" ColumnName="DOC_NAME" ParentName="TEXT_ITEM" Prompt="Наименование" MaximumLength="160" Width="2000" XPosition="450" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="DOC_NUMBER" ColumnName="DOC_NUMBER" ParentName="TEXT_ITEM" Prompt="Номер" MaximumLength="50" Width="950" XPosition="3400" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="DOC_DATE" ColumnName="DOC_DATE" ParentName="TEXT_ITEM_DATE" Prompt="Дата" MaximumLength="" Width="950" XPosition="2450" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="RECEIVER_NAME" ColumnName="RECEIVER_NAME" ParentName="TEXT_ITEM" Prompt="Наименование получателя" MaximumLength="160" Width="2000" XPosition="4350" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="RECEIVER_INN" ColumnName="RECEIVER_INN" ParentName="XXT_INN" Prompt="ИНН" MaximumLength="" Width="1000" XPosition="6350" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="RECEIVER_KPP" ColumnName="RECEIVER_KPP" ParentName="XXT_KPP" Prompt="КПП" MaximumLength="" Width="" XPosition="7350" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="OKATO_CODE1" ColumnName="OKATO_CODE1" ParentName="XXT_OKATO_CODE" Prompt="ОКАТО" MaximumLength="" Width="" XPosition="8150" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="BCC" ColumnName="BCC" ParentName="XXT_BCC_CODE" Prompt="Код по БК" MaximumLength="" Width="1550" XPosition="9150" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="SUBSIDY_TARGET_CODE" ColumnName="SUBSIDY_TARGET_CODE" ParentName="TEXT_ITEM" Prompt="Код цели" MaximumLength="20" Width="400" XPosition="10700" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="SUBSIDY_TARGET_CODE_R" ColumnName="SUBSIDY_TARGET_CODE_R" ParentName="TEXT_ITEM" Prompt="Учетный код цели" MaximumLength="20" Width="400" XPosition="11100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="AMOUNT" ColumnName="AMOUNT" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Сумма" MaximumLength="40" Width="1500" XPosition="11500" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="S_PRAVOM_RASH" ColumnName="expence_right" ParentName="CHECKBOX" Prompt="С правом расходования" MaximumLength="1" Width="250" XPosition="35950" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="PAYMENT_PURPOSE" ColumnName="PAYMENT_PURPOSE" ParentName="TEXT_ITEM" Prompt="Назначение платежа" MaximumLength="210" Width="7700" XPosition="1800" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="DESCRIPTION" ColumnName="DESCRIPTION" ParentName="TEXT_ITEM" Prompt="Примечание" MaximumLength="254" Width="7700" XPosition="1800" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="ATTRIBUTE1" ColumnName="ATTRIBUTE1" ParentName="TEXT_ITEM" Prompt="Тип документа" MaximumLength="150" Width="1000" XPosition="40100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="FUND_SOURCE" ColumnName="FUND_SOURCE" ParentName="TEXT_ITEM" Prompt="Источник финансирования" MaximumLength="240" Width="1000" XPosition="41100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="ATTRIBUTE3" ColumnName="ATTRIBUTE3" ParentName="TEXT_ITEM" Prompt="Рег. Номер БО" MaximumLength="150" Width="1000" XPosition="42100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="ATTRIBUTE4" ColumnName="ATTRIBUTE4" ParentName="TEXT_ITEM" Prompt="Доп.КБК1" MaximumLength="150" Width="1000" XPosition="43100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="ATTRIBUTE5" ColumnName="ATTRIBUTE5" ParentName="TEXT_ITEM" Prompt="Доп.КБК2" MaximumLength="150" Width="1000" XPosition="44100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="ATTRIBUTE6" ColumnName="ATTRIBUTE6" ParentName="TEXT_ITEM" Prompt="Доп.КБК3" MaximumLength="150" Width="1000" XPosition="45100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="ATTRIBUTE7" ColumnName="ATTRIBUTE7" ParentName="TEXT_ITEM" MaximumLength="150" Width="1000" XPosition="46100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="ATTRIBUTE8" ColumnName="ATTRIBUTE8" ParentName="TEXT_ITEM" MaximumLength="150" Width="1000" XPosition="47100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="ATTRIBUTE9" ColumnName="ATTRIBUTE9" ParentName="TEXT_ITEM" MaximumLength="150" Width="1000" XPosition="48100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="FK_OPER" ColumnName="FK_OPER" ParentName="TEXT_ITEM" Prompt="Вид внутриказначейской операции" MaximumLength="2000" Width="1000" XPosition="41100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="BANK_ACCOUNT_NUM_PAYER" ColumnName="BANK_ACCOUNT_NUM_PAYER" ParentName="TEXT_ITEM" Prompt="Банк.счет плательщика" MaximumLength="30" Width="1000" XPosition="41100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="BANK_ACCOUNT_NUM_RECEIVER" ColumnName="BANK_ACCOUNT_NUM_RECEIVER" ParentName="TEXT_ITEM" Prompt="Банк.счет получателя" MaximumLength="30" Width="1000" XPosition="41100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="PA_CODE_UUK" ColumnName="PA_CODE_UUK" ParentName="TEXT_ITEM" Prompt="Лицевой счет" MaximumLength="30" Width="1000" XPosition="41900" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES1" Name="LAST_YEAR_FLAG" ColumnName="LAST_YEAR_FLAG" ParentName="CHECKBOX" Prompt="Уточнение ПГ" MaximumLength="1" Width="1000" XPosition="42900" YPosition="250" Height=""></Field>
+</Canvas>
+
+<Canvas CanvasName="CANVAS_ST5" Multirow="Y" ParentName="CANVAS_STACKED" Width="100000" Height="1950" ViewportWidth="100000" ViewportHeight="1950" ViewportXPosition="350" ViewportYPosition="3450">
+<Field BlockName="DOC_LINES2" Name="LINE_NUMBER1" ColumnName="LINE_NUMBER1" ParentName="TEXT_ITEM" Prompt="№ п/п" MaximumLength="16" Width="450" XPosition="0" YPosition="250" Height="250"></Field>
+<Field BlockName="DOC_LINES2" Name="RECEIVER_NAME" ColumnName="RECEIVER_NAME" ParentName="TEXT_ITEM" Prompt="Наименование получателя" MaximumLength="160" Width="2500" XPosition="950" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES2" Name="RECEIVER_INN" ColumnName="RECEIVER_INN" ParentName="XXT_INN" Prompt="ИНН" MaximumLength="" Width="" XPosition="3450" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES2" Name="RECEIVER_KPP" ColumnName="RECEIVER_KPP" ParentName="XXT_KPP" Prompt="КПП" MaximumLength="" Width="" XPosition="4450" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES2" Name="OKATO_CODE" ColumnName="OKATO_CODE1" ParentName="XXT_OKATO_CODE" Prompt="ОКАТО" MaximumLength="" Width="" XPosition="5250" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES2" Name="BCC" ColumnName="BCC" ParentName="XXT_BCC_CODE" Prompt="Код по БК" MaximumLength="" Width="" XPosition="6250" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES2" Name="SUBSIDY_TARGET_CODE" ColumnName="SUBSIDY_TARGET_CODE" ParentName="TEXT_ITEM" Prompt="Код цели" MaximumLength="20" Width="400" XPosition="7800" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES2" Name="SUBSIDY_TARGET_CODE_R" ColumnName="SUBSIDY_TARGET_CODE_R" ParentName="TEXT_ITEM" Prompt="Учетный код цели" MaximumLength="20" Width="400" XPosition="8200" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES2" Name="AMOUNT" ColumnName="AMOUNT" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Сумма" MaximumLength="" Width="1500" XPosition="8600" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES2" Name="FUND_SOURCE_CODE" ColumnName="FUND_SOURCE_CODE" ParentName="TEXT_ITEM" Prompt="Вид средств" MaximumLength="2" Width="1101" XPosition="27699" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES2" Name="KAZN_FLAG" ColumnName="KAZN_FLAG" ParentName="CHECKBOX" Prompt="Внутренние расчеты" MaximumLength="1" Width="250" XPosition="35950" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES2" Name="PAYMENT_PURPOSE" ColumnName="PAYMENT_PURPOSE" ParentName="TEXT_ITEM" Prompt="Назначение платежа" MaximumLength="210" Width="3000" XPosition="15000" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES2" Name="ATTRIBUTE1" ColumnName="ATTRIBUTE1" ParentName="TEXT_ITEM" Prompt="Тип документа" MaximumLength="150" Width="1000" XPosition="40100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES2" Name="FUND_SOURCE" ColumnName="FUND_SOURCE" ParentName="TEXT_ITEM" Prompt="Источник финансирования" MaximumLength="240" Width="1000" XPosition="41100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES2" Name="FK_OPER" ColumnName="FK_OPER" ParentName="TEXT_ITEM" Prompt="Вид внутриказначейской операции" MaximumLength="2000" Width="1000" XPosition="41100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES2" Name="BANK_ACCOUNT_NUM_PAYER" ColumnName="BANK_ACCOUNT_NUM_PAYER" ParentName="TEXT_ITEM" Prompt="Банк.счет плательщика" MaximumLength="30" Width="1000" XPosition="41100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES2" Name="BANK_ACCOUNT_NUM_RECEIVER" ColumnName="BANK_ACCOUNT_NUM_RECEIVER" ParentName="TEXT_ITEM" Prompt="Банк.счет получателя" MaximumLength="30" Width="1000" XPosition="41100" YPosition="250" Height=""></Field>
+<Field BlockName="DOC_LINES2" Name="PA_CODE_UUK" ColumnName="PA_CODE_UUK" ParentName="TEXT_ITEM" Prompt="Лицевой счет" MaximumLength="30" Width="1000" XPosition="41100" YPosition="250" Height=""></Field>
+</Canvas>
+</TabPage>
+
+<TabPage TabPageName="Дополнительные атрибуты (&amp;3)">
+<Canvas CanvasName="CANVAS_ST2" Multirow="N" ParentName="CANVAS_STACKED_FIXED_FIELD" Width="9700" Height="4800" ViewportWidth="9700" ViewportHeight="4800" ViewportXPosition="150" ViewportYPosition="700">
+<Field BlockName="DOC_HEADERS" Name="REG_NUMBER" ColumnName="REG_NUMBER" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="Регистрационный номер" MaximumLength="50" Width="1900" XPosition="3100" YPosition="3575" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="REG_DATE" ColumnName="REG_DATE" ParentName="TEXT_ITEM_DATE" Prompt="Дата регистрации" MaximumLength="" Width="" XPosition="7100" YPosition="3575" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="BANK_BIK" ColumnName="BANK_BIK" ParentName="TEXT_ITEM" Prompt="БИК" MaximumLength="9" Width="1158" XPosition="7100" YPosition="4413" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="BUSINESS_STATUS_NAME" ColumnName="BUSINESS_STATUS_NAME" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="-" MaximumLength="240" Width="3100" XPosition="1950" YPosition="350" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="TRANSFER_STATUS" ColumnName="TRANSFER_STATUS" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="Статус передачи" MaximumLength="3" Width="400" XPosition="1550" YPosition="600" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="TRANSFER_STATUS_NAME" ColumnName="TRANSFER_STATUS_NAME" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="-" MaximumLength="240" Width="3100" XPosition="1950" YPosition="600" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="APPROVAL_STATUS" ColumnName="APPROVAL_STATUS" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="Статус утверждения" MaximumLength="3" Width="400" XPosition="1550" YPosition="850" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="APPROVAL_STATUS_NAME" ColumnName="APPROVAL_STATUS_NAME" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="-" MaximumLength="240" Width="3100" XPosition="1950" YPosition="850" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="DOC_SOURCE" ColumnName="DOC_SOURCE" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="-" MaximumLength="3" Width="400" XPosition="6100" YPosition="600" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="DOC_SOURCE_NAME" ColumnName="DOC_SOURCE_NAME" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="-" MaximumLength="240" Width="3100" XPosition="6500" YPosition="600" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="EXECUTOR_POSITION" ColumnName="EXECUTOR_POSITION" ParentName="TEXT_ITEM" Prompt="-Ответственный исполнитель-должность" MaximumLength="100" Width="1900" XPosition="3100" YPosition="2000" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="EXECUTOR_NAME" ColumnName="EXECUTOR_NAME" ParentName="TEXT_ITEM" Prompt="-Ответственный исполнитель-расшифровка подписи" MaximumLength="160" Width="2300" XPosition="5000" YPosition="2000" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="EXECUTOR_DATE" ColumnName="EXECUTOR_DATE" ParentName="TEXT_ITEM_DATE" Prompt="-Ответственный исполнитель-дата подписи" MaximumLength="" Width="" XPosition="8300" YPosition="2000" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="EXECUTOR_PHONE" ColumnName="EXECUTOR_PHONE" ParentName="TEXT_ITEM" Prompt="-Ответственный исполнитель-телефон" MaximumLength="160" Width="1000" XPosition="7300" YPosition="2000" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="FK_MANAGER_POSITION" ColumnName="FK_MANAGER_POSITION" ParentName="TEXT_ITEM" Prompt="- Руководитель ФК-должность" MaximumLength="100" Width="1900" XPosition="3100" YPosition="2850" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="FK_MANAGER_NAME" ColumnName="FK_MANAGER_NAME" ParentName="TEXT_ITEM" Prompt="- Руководитель ФК-расшифровка подписи" MaximumLength="160" Width="2300" XPosition="5000" YPosition="2850" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="FK_EXECUTOR_POSITION" ColumnName="FK_EXECUTOR_POSITION" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="-Ответственный исполнитель ФК-должность" MaximumLength="100" Width="1900" XPosition="3100" YPosition="3100" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="FK_EXECUTOR_NAME" ColumnName="FK_EXECUTOR_NAME" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="-Ответственный исполнитель ФК-расшифровка подписи" MaximumLength="160" Width="2300" XPosition="5000" YPosition="3100" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="FK_EXECUTOR_PHONE" ColumnName="FK_EXECUTOR_PHONE" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="-Ответственный исполнитель ФК-телефон" MaximumLength="160" Width="1000" XPosition="7300" YPosition="3100" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="MANAGER_POSITION" ColumnName="MANAGER_POSITION" ParentName="TEXT_ITEM" Prompt="-Руководитель (уполномоченное лицо) - должность" MaximumLength="100" Width="1900" XPosition="3100" YPosition="1750" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="MANAGER_NAME" ColumnName="MANAGER_NAME" ParentName="TEXT_ITEM" Prompt="-Руководитель (уполномоченное лицо) - расшифровка подписи" MaximumLength="160" Width="2300" XPosition="5000" YPosition="1750" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="ATTRIBUTE1" ColumnName="ATTRIBUTE1" ParentName="CHECKBOX" Prompt="Уточнение методом красное сторно" MaximumLength="150" Width="200" XPosition="96" YPosition="3914" Height=""></Field>
+<Field BlockName="DOC_HEADERS" Name="BUDGET_ACCOUNT" ColumnName="BUDGET_ACCOUNT" ParentName="TEXT_ITEM" Prompt="Банковский счет исполнения" MaximumLength="150" Width="3356" XPosition="2200" YPosition="4413" Height=""></Field>
+</Canvas>
+</TabPage>
+
+
+
+<TabCanvas Name="TAB1">
+<TabPage_ Name="DOCUMENT" Label="Документ (&amp;1)" />
+<TabPage_ Name="ORDER" Label="Платежные документы (&amp;2)" />
+<TabPage_ Name="ATTRIBUTE" Label="Дополнительные атрибуты (&amp;3)" />
+</TabCanvas>
+
+</Form>

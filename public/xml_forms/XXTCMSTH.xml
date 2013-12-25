@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form>
+<TabPage TabPageName="Tab-1">
+<Canvas CanvasName="CNV_STACKED_BASIC" Multirow="N" ParentName="CANVAS_STACKED" Width="24000" Height="4000" ViewportWidth="10000" ViewportHeight="4000" ViewportXPosition="" ViewportYPosition="400">
+<Field BlockName="BLC_MAIN" Name="STATEMENT_NUMBER" ColumnName="STATEMENT_NUMBER" ParentName="TEXT_ITEM" Prompt="Номер" MaximumLength="50" Width="1174" XPosition="1125" YPosition="202" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="STATEMENT_DATE_B" ColumnName="STATEMENT_DATE_B" ParentName="TEXT_ITEM_DATE" Prompt="Дата" MaximumLength="" Width="" XPosition="3036" YPosition="202" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="COMPLETED" ColumnName="COMPLETED" ParentName="TEXT_ITEM" Prompt="Выписка обработана?" MaximumLength="3" Width="302" XPosition="6042" YPosition="948" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="BANK_ACCOUNT_NUM" ColumnName="BANK_ACCOUNT_NUM" ParentName="TEXT_ITEM" Prompt="Номер счета" MaximumLength="20" Width="1757" XPosition="1128" YPosition="453" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="BIK_BANK" ColumnName="BIK_BANK" ParentName="TEXT_ITEM" Prompt="БИК банка" MaximumLength="11" Width="1172" XPosition="1128" YPosition="703" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="CURRENCY_CODE" ColumnName="CURRENCY_CODE" ParentName="XXT_CURRENCY_CODE" Prompt="Валюта" MaximumLength="" Width="563" XPosition="1132" YPosition="1489" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="EXCHANGE_RATE_TYPE_NAME" ColumnName="EXCHANGE_RATE_TYPE_name" ParentName="TEXT_ITEM" Prompt="Тип курса" MaximumLength="50" Width="2373" XPosition="2992" YPosition="1489" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="EXCHANGE_DATE" ColumnName="EXCHANGE_DATE" ParentName="TEXT_ITEM_DATE" Prompt="Дата пересчета" MaximumLength="" Width="" XPosition="6601" YPosition="1489" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="EXCHANGE_RATE" ColumnName="EXCHANGE_RATE" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Курс" MaximumLength="" Width="1007" XPosition="8813" YPosition="1489" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="BUSINESS_STATUS_NAME" ColumnName="BUSINESS_STATUS_NAME" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="Статус" MaximumLength="244" Width="1074" XPosition="7438" YPosition="202" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="IS_ACCOUNTED" ColumnName="IS_ACCOUNTED" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="Пров?" MaximumLength="3" Width="445" XPosition="9271" YPosition="198" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="DOC_TYPE" ColumnName="DOC_TYPE" ParentName="TEXT_ITEM" Prompt="Вид выписки" MaximumLength="3" Width="532" XPosition="6020" YPosition="202" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="BANK_NAME" ColumnName="BANK_NAME" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="Название банка" MaximumLength="160" Width="3700" XPosition="6016" YPosition="703" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="CONTROL_TOTAL_DR" ColumnName="CONTROL_TOTAL_DR" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Обороты по дб" MaximumLength="" Width="800" XPosition="1626" YPosition="2834" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="CONTROL_TOTAL_CR" ColumnName="CONTROL_TOTAL_CR" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Обороты по кр" MaximumLength="" Width="800" XPosition="1626" YPosition="3094" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="CONTROL_END_BALANCE" ColumnName="CONTROL_END_BALANCE" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Исходящий остаток" MaximumLength="" Width="1200" XPosition="2333" YPosition="2358" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="CONTROL_BEGIN_BALANCE" ColumnName="CONTROL_BEGIN_BALANCE" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Входящий остаток" MaximumLength="" Width="1200" XPosition="2333" YPosition="2083" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="CONTROL_BEGIN_BALANCE_BASE" ColumnName="CONTROL_BEGIN_BALANCE_BASE" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Входящий остаток в функциональной валюте" MaximumLength="" Width="1083" XPosition="7771" YPosition="2083" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="CONTROL_END_BALANCE_BASE" ColumnName="control_end_balance_base" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Исходящий остаток в функциональной валюте" MaximumLength="" Width="1083" XPosition="7771" YPosition="2344" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="CONTROL_DR_LINE_COUNT" ColumnName="CONTROL_DR_LINE_COUNT" ParentName="TEXT_ITEM" Prompt="Число строк по дб" MaximumLength="11" Width="800" XPosition="1626" YPosition="3345" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="CONTROL_CR_LINE_COUNT" ColumnName="CONTROL_CR_LINE_COUNT" ParentName="TEXT_ITEM" Prompt="Число строк по кр" MaximumLength="11" Width="800" XPosition="1626" YPosition="3606" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="SUM_DR" ColumnName="SUM_DR" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Обороты по дб" MaximumLength="" Width="800" XPosition="6631" YPosition="2844" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="STATEMENT_DR" ColumnName="STATEMENT_DR" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Обороты по дб" MaximumLength="" Width="800" XPosition="4189" YPosition="2840" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="SUM_KR" ColumnName="SUM_KR" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Обороты по кр" MaximumLength="" Width="800" XPosition="6631" YPosition="3104" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="STATEMENT_KR" ColumnName="STATEMENT_KR" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Обороты по кр" MaximumLength="" Width="800" XPosition="4189" YPosition="3100" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="COUNT_LINE_KR" ColumnName="COUNT_LINE_KR" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="Число строк по кр" MaximumLength="40" Width="800" XPosition="6631" YPosition="3616" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="STATEMENT_LINE_KR" ColumnName="STATEMENT_LINE_KR" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="Число строк по кр" MaximumLength="40" Width="800" XPosition="4189" YPosition="3612" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="STATEMENT_LINE_DR" ColumnName="STATEMENT_LINE_DR" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="Число строк по дб" MaximumLength="40" Width="800" XPosition="4189" YPosition="3351" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="NAME_TYPE_ACCOUNT" ColumnName="NAME_TYPE_ACCOUNT" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="Вид счета" MaximumLength="240" Width="3700" XPosition="6016" YPosition="453" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="IS_REPROC_SHOW" ColumnName="IS_REPROC_SHOW" ParentName="TEXT_ITEM" Prompt="Переобр.?" MaximumLength="3" Width="459" XPosition="1124" YPosition="944" Height=""></Field>
+</Canvas>
+</TabPage>
+<TabPage TabPageName="Tab-2">
+<Canvas CanvasName="CNV_STACKED_TECHNIC" Multirow="N" ParentName="CANVAS_STACKED" Width="24000" Height="3500" ViewportWidth="10000" ViewportHeight="3500" ViewportXPosition="" ViewportYPosition="400">
+<Field BlockName="BLC_MAIN" Name="RECEIVER_NUM_STMT" ColumnName="RECEIVER_NUM_STMT" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="Уникальный идентификатор получателя" MaximumLength="20" Width="1450" XPosition="3300" YPosition="2575" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="NUM_AUTHOR_STMT" ColumnName="NUM_AUTHOR_STMT" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="Уникальный идентификатор составителя" MaximumLength="20" Width="1450" XPosition="3300" YPosition="2835" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="REQUEST_DATE" ColumnName="REQUEST_DATE" ParentName="TEXT_ITEM" Prompt="Время начала составления выписки" MaximumLength="" Width="989" XPosition="3749" YPosition="1303" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="LAST_TRANS_ACCOUNT" ColumnName="LAST_TRANS_ACCOUNT" ParentName="TEXT_ITEM" Prompt="Дата последнего движения по счету" MaximumLength="10" Width="1000" XPosition="3748" YPosition="1042" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="LIMIT_CREDIT" ColumnName="LIMIT_CREDIT" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Размер лимита кредита" MaximumLength="" Width="1365" XPosition="7779" YPosition="521" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="LIMIT_OVER_NIGHT" ColumnName="LIMIT_OVER_NIGHT" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Сумма выданного кредита" MaximumLength="" Width="1354" XPosition="7790" YPosition="781" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="QUERY_DATE" ColumnName="QUERY_DATE" ParentName="TEXT_ITEM" Prompt="Дата, на которую формируется выписка" MaximumLength="10" Width="1000" XPosition="3748" YPosition="521" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="RESERVE_SUM" ColumnName="RESERVE_SUM" ParentName="XXT_MONETARY_MODIFIABLE" Prompt="Сумма забронированных средств" MaximumLength="" Width="1354" XPosition="7790" YPosition="1042" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="NUM_DOC_DAY" ColumnName="NUM_DOC_DAY" ParentName="TEXT_ITEM" Prompt="Порядковый номер документа" MaximumLength="40" Width="1450" XPosition="3300" YPosition="2314" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="GL_DATE" ColumnName="GL_DATE" ParentName="TEXT_ITEM" Prompt="Учетная дата" MaximumLength="10" Width="1344" XPosition="6685" YPosition="2585" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="TIME_CRT_STMT" ColumnName="TIME_CRT_STMT" ParentName="TEXT_ITEM" Prompt="Время составления банковской выписки" MaximumLength="30" Width="1000" XPosition="3748" YPosition="1573" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="STATEMENT_DATE_TECH" ColumnName="STATEMENT_DATE_TECH" ParentName="TEXT_ITEM" Prompt="Дата совершения операций по счету" MaximumLength="10" Width="1000" XPosition="3748" YPosition="782" Height=""></Field>
+<Field BlockName="BLC_MAIN" Name="STATUS_CREATE_DOC_NAME" ColumnName="status_create_doc_name" ParentName="TEXT_ITEM_DISPLAY_ONLY" Prompt="Тип создания" MaximumLength="60" Width="2458" XPosition="6685" YPosition="2314" Height=""></Field>
+</Canvas>
+</TabPage>
+</TabPage>
+</Form>

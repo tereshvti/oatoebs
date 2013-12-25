@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tech_id: 1
+  xxt_bs_id: 1
+  c_code_id: 1
+  name: MyString
+
+two:
+  tech_id: 1
+  xxt_bs_id: 1
+  c_code_id: 1
+  name: MyString

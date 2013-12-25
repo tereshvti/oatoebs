@@ -1,0 +1,7 @@
+﻿<div class="head2">AT - СПТО:Настройка привязки ТР к действиям, совершаемым с документами</div>
+<%= form_tag ats_index_path, :method => "get" do %>
+	<%= render 's_ats' %>
+<% end %>
+<%= will_paginate @ats %>
+<%= render 't_ats', ats:@ats %>
+<%= will_paginate @ats %>

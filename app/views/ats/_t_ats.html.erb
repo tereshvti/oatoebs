@@ -1,0 +1,26 @@
+﻿<table width=100% class="gtable">
+<thead>
+	<tr>
+		<th></th>
+		<th>group_code</th>
+		<th>doc_types</th> 
+		<th>action_code</th>
+		<th>tr_code</th>	 
+		<th>techregl_select</th> 
+		<th>for_group_only</th> 
+	</tr>
+</thead>
+<tbody>
+	<% @ats.each { |f|  %>
+		<tr>
+			<td class="tr_act_check"><%= radio_button_tag 'tr_act_id', f.id %></td>
+			<td><%= f.group_code %></td>
+			<td><%= f.doc_types %></td>
+			<td><%= f.action_code %></td>
+			<td><%= f.tr_code %></td>
+			<td><%= f.techregl_select %></td>
+			<td><%= f.for_group_only %></td>
+		</tr>
+	<% } %>
+	</tbody>
+</table>

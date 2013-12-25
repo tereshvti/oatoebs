@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  suite_id: 1
+  responsible: MyString
+
+two:
+  name: MyString
+  suite_id: 1
+  responsible: MyString

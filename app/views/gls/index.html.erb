@@ -1,0 +1,30 @@
+﻿<div class="head2">Просмотр проекта</div>
+<div class="nav_cont_m">
+<div id="nav1">  
+<h1>Справочники импортируемые</h1>
+<ul>  
+<li><%= link_to "FM - Формы", {controller:"fms", action:"index"} %></li>  
+<li><%= link_to "DD - Группы и типы документов", {controller:"dds", action:"index"} %></li> 
+<li><%= link_to "TR - Операции по тех.регламенту (SPTO45)", {controller:"trs", action:"index"} %></li>
+<li><%= link_to "EV - События ППО (SPTO45)", {controller:"evs", action:"index"} %></li>
+<li><%= link_to "AT - xxt_bs_tr_actions_v - СПТО:Настройка привязки ТР к действиям, совершаемым с документами", {controller:"ats", action:"index"} %></li> 
+<li><%= link_to "OB - xxt_bs_operations - Операции", {controller:"obs", action:"index"} %></li>  
+</ul>  
+</div>
+
+<div id="nav1">  
+<h1>Компоненты приложения</h1>
+<ul>
+<li><%= link_to "FN - Функции", {controller:"fns", action:"index"} %></li>   
+<li><%= link_to "TS - Тесты", {controller:"tss", action:"index"} %></li>
+</ul>  
+</div>
+
+<div id="nav1">  
+<h1>Отчёты</h1>
+<ul>  
+<li><%= link_to "Результаты тестирования патчей", {controller:"gls", action:"rep_patch_result"} %></li>  
+<li><%= link_to "Покрытие тестами операций", {controller:"gls", action:"rep_tr_span"} %></li>  
+</ul>  
+</div>
+</div>

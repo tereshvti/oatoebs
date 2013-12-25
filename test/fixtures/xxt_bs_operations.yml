@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  doc_group_code: MyString
+  user_operation_name: MyString
+  operation_id: MyString
+  operation_code: MyString
+  stored_proc_name: MyString
+  techregl_code: MyString
+  techregl_select: MyString
+  initialization_type: MyString
+  group_oper_flag: MyString
+
+two:
+  doc_group_code: MyString
+  user_operation_name: MyString
+  operation_id: MyString
+  operation_code: MyString
+  stored_proc_name: MyString
+  techregl_code: MyString
+  techregl_select: MyString
+  initialization_type: MyString
+  group_oper_flag: MyString

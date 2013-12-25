@@ -1,0 +1,53 @@
+﻿i = 0
+$ ->
+  $("div#myModal1").on "hide.bs.modal", ->
+    input = $('td.tr_check input:checked')
+    id = input.val()
+    $('input#tr_id').val(id)
+    $('div#tr').html(input.parent().next().text()+'<br/>'+input.parent().next().next().text()+'<br/>'+input.parent().next().next().next().next().next().next().next().text()+'<br/>'+input.parent().next().next().next().next().next().next().next().next().text())
+  $("div#myModal2").on "hide.bs.modal", ->
+    input = $('td.tr_act_check input:checked')
+    $('div#tr_act').html(input.parent().next().text()+'<br/>'+input.parent().next().next().text()+'<br/>'+input.parent().next().next().next().text())
+    $('input#tr_act_id').val(input.val())
+  $("div#myModal3").on "hide.bs.modal", ->
+    input = $('td.tr_op_check input:checked')
+    $('div#tr_op').html(input.parent().next().text()+'<br/>'+input.parent().next().next().text()+'<br/>'+input.parent().next().next().next().text()+'<br/>'+input.parent().next().next().next().next().text()+'<br/>'+input.parent().next().next().next().next().next().text())
+    $('input#tr_op_id').val(input.val())
+  $("div#myModal4").on "hide.bs.modal", ->
+    input = $('td.tr_ev_check input:checked')
+    $('div#tr_ev').html(input.parent().next().text()+'<br/>'+input.parent().next().next().text()+'<br/>'+input.parent().next().next().next().text())
+    $('input#tr_ev_id').val(input.val())
+$ ->
+  $('div#new_func').hide()
+  $('div#arguments').on "click", 'a#del_arg', ->
+     $(this).parent().remove()
+     return false
+  $('#add_func').on "click", ->
+    $('div#new_func').slideToggle(300)
+  div = $ "<div>",
+    id: 'one_argument'
+  div.append ->
+    $ "<input>",
+      type: 'checkbox'
+      name: '[form]'
+      value: 'yes'
+  div.append ->
+    $ "<input>",
+      type: 'text'
+      name: '[name]'
+      style: "width: 300px;"
+  div.append ->
+    $ "<input>",
+      type: 'text'
+      name: '[desc]'
+      style: "width: 300px;"
+  div.append ->
+    $ "<a>",
+      id: 'del_arg'
+      text: 'удалить'
+  $('#add_arg').on "click", ->
+    clone = div.clone()
+    for input in clone.find('input')
+      input.name = 'arg[' + i + ']' + input.name 
+    i++
+    $('div#arguments').append clone

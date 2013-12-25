@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Oatoebs</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="head1">ОАТ OEBS</div>
+	<div id="menucontainer">
+		<div id="menu">
+			<ul>
+				<li><%= link_to "Монитор", {controller:"tss", action:"monitor"} %></li>
+				<li><%= link_to "Просмотр проекта", {controller:"gls", action:"index"} %></li>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<%= yield %>
+	</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<div class="head2">Формы</div>
+
+<div class="nav_cont">
+
+<%= form_tag fms_index_path, :method => "get" do %>
+    <%= label_tag(:search, "Search:") %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+<%= will_paginate @forms %>
+	 <table width=100% class="gtable">
+	 <thead>
+	<tr>
+	 <th>form_id</th>
+	 <th>form_name</th>
+	 <th>user_form_name</th>
+	 </tr>
+	 </thead>
+	 <tbody>
+  <% @forms.each { |f|  %>
+	 
+	 <tr>
+	 <td><%= f.form_id %></td>
+	 <td><%= link_to f.form_name, {controller:"fms", action:"show", :form_name=>f.form_name, :user_form_name=>f.user_form_name} %></td>
+	 <td><%= f.user_form_name %></td>
+	 </tr>
+	
+  <% } %>
+  </tbody>
+   </table>
+   <%= will_paginate @forms %>
+   </div>
